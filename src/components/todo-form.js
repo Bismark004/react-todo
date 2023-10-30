@@ -1,6 +1,6 @@
-import React, {useState} from 'react'
+import {React, useState} from 'react'
 
-const Todo() {
+function Todo () {
     const [tasks, setTasks] = ([]);
     const [task, setTask] = ('');
 
