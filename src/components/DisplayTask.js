@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import './display-task.css'; 
+import "./display-task.css";
 
 function DisplayTask(props) {
     const [editedTask, setEditedTask] = useState('');
     const [editIndex, setEditIndex] = useState(null);
-
 
     const editTask = (index) => {
         setEditIndex(index);
@@ -24,25 +23,12 @@ function DisplayTask(props) {
         setEditedTask('');
     };
 
-    const handleDelete = (index) => {
-        props.deleteTask(index);
-    };
+   const completeTask = (index) => {
 
-    function completeTask(index) {
-        const updatedTasks = props.tasks.map((task, i) => {
-            if (i === index) {
-                return task + " - completed sucessfully";
-            }
-            return task;
-        });
-        props.setTasks(updatedTasks);
+
+   }
             
-
-
-
-    } 
-
-    
+                
 
     return (
         <div className='display-task'>
@@ -50,15 +36,18 @@ function DisplayTask(props) {
                 <div key={index} className='task'>
                     {editIndex === index ? (
                         <div>
-                            <input value={editedTask} onChange={handleEditChange} />
+                            <input value={editedTask}
+                             onChange={handleEditChange} />
                             <button onClick={saveTask}>Save</button>
                         </div>
                     ) : (
                         <div className='activity'>
-                            <p onClick={completeTask(index)}>{task}</p>
+                            <p className='todo'>{task}</p>
                             <div className='buttons'>
-                                <button onClick={() => editTask(index)} className='edit'>Edit</button>
-                                <button onClick={() => handleDelete(index)} className='delete'>Delete</button>
+                                <button onClick={() => editTask(index)}
+                                 className='edit'>Edit</button>
+                                <button onClick={() => props.deleteTask(index)}
+                                 className='delete'>Delete</button>
                             </div>
                         </div>
                     )}

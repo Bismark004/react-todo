@@ -46,7 +46,7 @@
     border: 1px solid blueviolet;
     padding: 0 20px;
     border-radius: 10px;
-    background-color: var(--body-color);
+    background-image: linear-gradient(to top, #6a85b6 0%, #bac8e0 100%);
     transition: var(--tran-03);
     margin: 20px auto;
   }
@@ -54,6 +54,7 @@
   .activity{
     width: 100%;
     height: 80%;
+  
 
   }
 
@@ -85,3 +86,11 @@
     border-radius: 4px;
     
   }
+
+  .todo-clicked{
+    text-decoration: line-through;
+  }
+
+  
+
+
