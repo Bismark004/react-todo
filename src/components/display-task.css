@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+:root {
+    /* ===== Colors ===== */
+    --body-color: #e4e9f7;
+    --sidebar-color: #fff;
+    --primary-color: #dc143c;
+    --primary-color-light: #f6f5ff;
+    --toggle-color: #ddd;
+    --text-color: #707070;
+  
+    /* ====== Transition ====== */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+  }
+
+
+  .display-task {
+    margin-top: 20px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: var(--body-color);
+    transition: var(--tran-03);
+
+  }
+
+  .task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    border: 1px solid blueviolet;
+    padding: 0 20px;
+    border-radius: 10px;
+    background-color: var(--body-color);
+    transition: var(--tran-03);
+    margin: 20px auto;
+  }
+
+  .activity{
+    width: 100%;
+    height: 80%;
+
+  }
+
+
+  .activity p {
+    width: 60%;
+    height: 60%;
+    font-size: 24px;
+    
+  }
+
+  .edit {
+    color: white;
+    background-color: green;
+    border: none;
+    width: 60px;
+    height: 25px;
+    margin-right: 10px;
+    border-radius: 4px;
+
+  }
+
+  .delete {
+    color: white;
+    background-color: red;
+    border: none;
+    width: 60px;
+    height: 25px;
+    border-radius: 4px;
+    
+  }

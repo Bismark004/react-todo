@@ -1,8 +1,9 @@
 
 
 import React, { useState } from 'react';
-import SearchBox from './SearchBox';
+import SearchBox from './searchBox'
 import DisplayTask from './DisplayTask';
+import './Todo.css';
 
 function Todo() {
   const [tasks, setTasks] = useState([]);
@@ -25,15 +26,15 @@ function Todo() {
   };
 
   return (
-    <div>
+    <div className='Todo'>
       <h1>TODO APP</h1>
       <SearchBox
         onChange={onChange}
         value={task}
         onClick={onClick}
-      />
+        />
 
-      <DisplayTask tasks={tasks} setTasks={setTasks} deleteTask={deleteTask} />
+      <DisplayTask tasks={tasks} setTasks={setTasks}  deleteTask={deleteTask}/>
     </div>
   );
 }
