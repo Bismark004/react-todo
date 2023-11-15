@@ -23,10 +23,6 @@ function DisplayTask(props) {
         setEditedTask('');
     };
 
-   const completeTask = (index) => {
-
-
-   }
             
                 
 
